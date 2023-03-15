@@ -1,0 +1,227 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "PermanentResidentCard": "https://discovery.biothings.io/view/PermanentResidentCard/"
+  },
+  "@graph": [
+    {
+      "@id": "PermanentResidentCard:PermanentResident",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Specifies that the credential is a permanent resident card. (https://w3c-ccg.github.io/citizenship-vocab/)",
+      "rdfs:label": "PermanentResident",
+      "rdfs:subClassOf": {
+        "@id": "schema:Dataset"
+      },
+      "$validation": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "birthCountry": {
+            "description": "The country in which a individual was born.",
+            "owl:cardinality": "one",
+            "type": "string"
+          },
+          "birthDate": {
+            "description": "The date on which a individual was born.",
+            "owl:cardinality": "one",
+            "format": "date",
+            "type": "string"
+          },
+          "commuterClassification": {
+            "description": "A code that specifies whether an individual lives in a specific country or commutes across a border to work.",
+            "owl:cardinality": "one",
+            "type": "string"
+          },
+          "familyName": {
+            "description": "The name of the family with which the individual identifies.",
+            "owl:cardinality": "one",
+            "type": "string"
+          },
+          "gender": {
+            "description": "The gender of the individual.",
+            "owl:cardinality": "one",
+            "type": "string"
+          },
+          "givenName": {
+            "description": "The non-family name with which the individual identifies.",
+            "owl:cardinality": "one",
+            "type": "string",
+            "@id": "https://schema.org/givenName"
+          },
+          "lprCategory": {
+            "description": "The category for a legal permanent resident as specified by the country's official body for making such a determination.",
+            "owl:cardinality": "one",
+            "type": "string"
+          },
+          "lprNumber": {
+            "description": "The identifier which is used to identify the legal permanent resident by the country's official body for making such a determination.",
+            "owl:cardinality": "one",
+            "type": "string"
+          },
+          "residentSince": {
+            "description": "The date from which the individual is considered a resident.",
+            "owl:cardinality": "one",
+            "format": "date",
+            "type": "string"
+          },
+          "identifier": {
+            "description": "The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.\n        ",
+            "owl:cardinality": "one",
+            "type": "string"
+          },
+          "image": {
+            "description": "An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].",
+            "owl:cardinality": "one",
+            "type": "string"
+          }
+        },
+        "required": [
+          "birthCountry",
+          "birthDate",
+          "commuterClassification",
+          "familyName",
+          "gender",
+          "givenName",
+          "lprCategory",
+          "lprNumber",
+          "residentSince",
+          "identifier",
+          "image"
+        ],
+        "recommended": [],
+        "optional": []
+      }
+    },
+    {
+      "@id": "PermanentResidentCard:birthCountry",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The country in which a individual was born.",
+      "rdfs:label": "birthCountry",
+      "schema:domainIncludes": {
+        "@id": "PermanentResidentCard:PermanentResident"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        },
+        {
+          "@id": "schema:Person"
+        }
+      ]
+    },
+    {
+      "@id": "PermanentResidentCard:birthDate",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The date on which a individual was born.",
+      "rdfs:label": "birthDate",
+      "schema:domainIncludes": {
+        "@id": "PermanentResidentCard:PermanentResident"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Date"
+        }
+      ]
+    },
+    {
+      "@id": "PermanentResidentCard:commuterClassification",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A code that specifies whether an individual lives in a specific country or commutes across a border to work.",
+      "rdfs:label": "commuterClassification",
+      "schema:domainIncludes": {
+        "@id": "PermanentResidentCard:PermanentResident"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "PermanentResidentCard:familyName",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The name of the family with which the individual identifies.",
+      "rdfs:label": "familyName",
+      "schema:domainIncludes": {
+        "@id": "PermanentResidentCard:PermanentResident"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "PermanentResidentCard:gender",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The gender of the individual.",
+      "rdfs:label": "gender",
+      "schema:domainIncludes": {
+        "@id": "PermanentResidentCard:PermanentResident"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "PermanentResidentCard:givenName",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The non-family name with which the individual identifies.",
+      "rdfs:label": "givenName",
+      "schema:domainIncludes": {
+        "@id": "PermanentResidentCard:PermanentResident"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "PermanentResidentCard:lprCategory",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The category for a legal permanent resident as specified by the country's official body for making such a determination.",
+      "rdfs:label": "lprCategory",
+      "schema:domainIncludes": {
+        "@id": "PermanentResidentCard:PermanentResident"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "PermanentResidentCard:lprNumber",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The identifier which is used to identify the legal permanent resident by the country's official body for making such a determination.",
+      "rdfs:label": "lprNumber",
+      "schema:domainIncludes": {
+        "@id": "PermanentResidentCard:PermanentResident"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Text"
+        }
+      ]
+    },
+    {
+      "@id": "PermanentResidentCard:residentSince",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The date from which the individual is considered a resident.",
+      "rdfs:label": "residentSince",
+      "schema:domainIncludes": {
+        "@id": "PermanentResidentCard:PermanentResident"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "schema:Date"
+        }
+      ]
+    }
+  ]
+}
