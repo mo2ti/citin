@@ -1,0 +1,77 @@
+{
+  "@context": {
+    "VaccinationCertificate": {
+      "@id": "https://schema.affinidi.com/VaccinationCertificateV1-0.jsonld",
+      "@context": {
+        "@version": 1.1,
+        "@protected": true
+      }
+    },
+    "batchNumber": {
+      "@id": "schema-id:batchNumber",
+      "@type": "https://schema.org/Number"
+    },
+    "administeringCentre": {
+      "@id": "schema-id:administeringCentre",
+      "@type": "https://schema.org/Text"
+    },
+    "healthProfessional": {
+      "@id": "schema-id:healthProfessional",
+      "@type": "https://schema.org/Text"
+    },
+    "countryOfVaccination": {
+      "@id": "schema-id:countryOfVaccination",
+      "@type": "https://schema.org/Text"
+    },
+    "recipient": {
+      "@id": "schema-id:recipient",
+      "@context": {
+        "type": {
+          "@id": "schema-id:type",
+          "@type": "https://schema.org/Text"
+        },
+        "givenName": {
+          "@id": "schema-id:givenName",
+          "@type": "https://schema.org/Text"
+        },
+        "familyName": {
+          "@id": "schema-id:familyName",
+          "@type": "https://schema.org/Text"
+        },
+        "gender": {
+          "@id": "schema-id:gender",
+          "@type": "https://schema.org/Text"
+        },
+        "birthDate": {
+          "@id": "schema-id:birthDate",
+          "@type": "https://schema.org/Date"
+        }
+      }
+    },
+    "vaccine": {
+      "@id": "schema-id:vaccine",
+      "@context": {
+        "type": {
+          "@id": "schema-id:type",
+          "@type": "https://schema.org/Text"
+        },
+        "disease": {
+          "@id": "schema-id:disease",
+          "@type": "https://schema.org/Text"
+        },
+        "atcCode": {
+          "@id": "schema-id:atcCode",
+          "@type": "https://schema.org/Text"
+        },
+        "medicinalProductName": {
+          "@id": "schema-id:medicinalProductName",
+          "@type": "https://schema.org/Text"
+        },
+        "marketingAuthorizationHolder": {
+          "@id": "schema-id:marketingAuthorizationHolder",
+          "@type": "https://schema.org/Text"
+        }
+      }
+    }
+  }
+}
