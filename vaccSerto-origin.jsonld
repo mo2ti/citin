@@ -1,0 +1,89 @@
+{
+  "@context": {
+    "w3ccred": "https://www.w3.org/2018/credentials#",
+    "schema-id": "https://beta.api.schemas.serto.id/v1/public/vaccination-certificate-vc/1.1/ld-context.json#",
+    "VaccinationCertificate": {
+      "@id": "schema-id"
+    },
+    "credentialSubject": {
+      "@id": "w3ccred:credentialSubject",
+      "@context": {
+        "id": {
+          "@id": "schema-id:id",
+          "@type": "@id"
+        },
+        "type": {
+          "@id": "schema-id:type",
+          "@type": "http://schema.org/Text"
+        },
+        "batchNumber": {
+          "@id": "schema-id:batchNumber",
+          "@type": "http://schema.org/Number"
+        },
+        "administeringCentre": {
+          "@id": "schema-id:administeringCentre",
+          "@type": "http://schema.org/Text"
+        },
+        "healthProfessional": {
+          "@id": "schema-id:healthProfessional",
+          "@type": "http://schema.org/Text"
+        },
+        "countryOfVaccination": {
+          "@id": "schema-id:countryOfVaccination",
+          "@type": "http://schema.org/Text"
+        },
+        "recipient": {
+          "@id": "schema-id:recipient",
+          "@context": {
+            "type": {
+              "@id": "schema-id:type",
+              "@type": "http://schema.org/Text"
+            },
+            "givenName": {
+              "@id": "schema-id:givenName",
+              "@type": "http://schema.org/Text"
+            },
+            "familyName": {
+              "@id": "schema-id:familyName",
+              "@type": "http://schema.org/Text"
+            },
+            "gender": {
+              "@id": "schema-id:gender",
+              "@type": "http://schema.org/Text"
+            },
+            "birthDate": {
+              "@id": "schema-id:birthDate",
+              "@type": "http://schema.org/Date"
+            }
+          }
+        },
+        "vaccine": {
+          "@id": "schema-id:vaccine",
+          "@context": {
+            "type": {
+              "@id": "schema-id:type",
+              "@type": "http://schema.org/Text"
+            },
+            "disease": {
+              "@id": "schema-id:disease",
+              "@type": "http://schema.org/Text"
+            },
+            "atcCode": {
+              "@id": "schema-id:atcCode",
+              "@type": "http://schema.org/Text"
+            },
+            "medicinalProductName": {
+              "@id": "schema-id:medicinalProductName",
+              "@type": "http://schema.org/Text"
+            },
+            "marketingAuthorizationHolder": {
+              "@id": "schema-id:marketingAuthorizationHolder",
+              "@type": "http://schema.org/Text"
+            }
+          }
+        }
+      }
+    },
+    "@version": 1.1
+  }
+}
