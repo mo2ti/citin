@@ -6,16 +6,6 @@
       "@id": "schema-id"
     },
     "credentialSubject": {
-      "@id": "w3ccred:credentialSubject",
-      "@context": {
-        "id": {
-          "@id": "schema-id:id",
-          "@type": "@id"
-        },
-        "type": {
-          "@id": "schema-id:type",
-          "@type": "http://schema.org/Text"
-        },
         "batchNumber": {
           "@id": "schema-id:batchNumber",
           "@type": "http://schema.org/Number"
